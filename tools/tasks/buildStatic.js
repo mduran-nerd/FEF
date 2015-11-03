@@ -12,6 +12,7 @@ module.exports = function(grunt) {
                         src: [
                             '**/.htaccess',
                             '**/*.{asp,aspx,cshtml,jsp,php,py,rb,txt}',
+                            'assets/fonts/**',
                             'assets/media/**',
                             'assets/vendor/**/*.{gif,eot,svg,ttf,woff}'
                         ],
@@ -23,6 +24,7 @@ module.exports = function(grunt) {
                         src: [
                             '**/.htaccess',
                             '**/*.{asp,aspx,cshtml,jsp,php,py,rb,txt}',
+                            'assets/fonts/**',
                             'assets/media/**',
                             'assets/vendor/**/*.{gif,eot,svg,ttf,woff}'
                         ],

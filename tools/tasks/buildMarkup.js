@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                         dest: '<%= env.DIR_BEFORE %>',
                         ext: '.html',
                         src: [
-                            '**/*.hbs',
+                            'before.hbs',
                             '!templates/**',
                             '!assets/vendor/**'
                         ]
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                         dest: '<%= env.DIR_AFTER %>',
                         ext: '.html',
                         src: [
-                            '**/*.hbs',
+                            'after.hbs',
                             '!templates/**',
                             '!assets/vendor/**'
                         ]

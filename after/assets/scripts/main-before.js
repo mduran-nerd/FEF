@@ -11,7 +11,7 @@
  */
 require(
     [
-        './App'
+        './before/App'
     ],
     function(
         App

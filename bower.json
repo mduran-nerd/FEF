@@ -5,7 +5,8 @@
   "dependencies": {
     "requirejs": "2.1.16",
     "jquery": "git://github.com/components/jquery#1.11.0",
-    "nerdery-function-bind": "./tools/cache/nerdery-function-bind"
+    "nerdery-function-bind": "./tools/cache/nerdery-function-bind",
+    "slick-carousel": "~1.5.8"
   },
   "devDependencies": {}
 }

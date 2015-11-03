@@ -85,12 +85,6 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '<%= env.DIR_TMP %>',
-                        dest: '<%= env.DIR_DEST %>',
-                        src: ['**/*.html']
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= env.DIR_TMP %>',
                         dest: '<%= env.DIR_BEFORE %>',
                         src: ['**/*.html']
                     },

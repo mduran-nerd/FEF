@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                             '**/.htaccess',
                             '**/*.{asp,aspx,cshtml,jsp,php,py,rb,txt}',
                             'assets/media/**',
-                            '!assets/vendor/**'
+                            'assets/vendor/**/*.{gif,eot,svg,ttf,woff}'
                         ],
                         dest: '<%= env.DIR_BEFORE %>'
                     },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                             '**/.htaccess',
                             '**/*.{asp,aspx,cshtml,jsp,php,py,rb,txt}',
                             'assets/media/**',
-                            '!assets/vendor/**'
+                            'assets/vendor/**/*.{gif,eot,svg,ttf,woff}'
                         ],
                         dest: '<%= env.DIR_AFTER %>'
                     }

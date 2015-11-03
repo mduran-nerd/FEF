@@ -35,10 +35,18 @@ require.config({
     paths: {
         // this empty string tells r.js to use single quotes when injecting
         // bower modules automatically. Otherwise it defaults to double quotes.
-        'requirejs': ''
+        'requirejs': '',
+        'jQuery': '../vendor/jquery/jquery',
+        'slick': '../vendor/slick-carousel/slick/slick'
     },
 
     shim: {
+        jQuery: {
+            exports: 'jQuery'
+        },
+        slick: {
+            deps: ['jQuery']
+        }
     },
 
     waitSeconds: 120

@@ -1,0 +1,22 @@
+//
+// Slide
+// --------------------------------------------------
+
+.slide {
+  position: relative;
+  padding-bottom: 25%;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide_one {
+  background-image: url('../media/one.jpg');
+}
+
+.slide_two {
+  background-image: url('../media/two.jpg');
+}
+
+.slide_three {
+  background-image: url('../media/three.jpg');
+}

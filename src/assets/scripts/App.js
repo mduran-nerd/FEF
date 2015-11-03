@@ -1,6 +1,8 @@
 define(function(require, exports, module) { // jshint ignore:line
     'use strict';
-    
+
+    var $ = require('jQuery');
+    var slick = require('slick');
 
     /**
      * Initial application setup. Runs once upon every page load.
@@ -22,6 +24,13 @@ define(function(require, exports, module) { // jshint ignore:line
      */
     proto.init = function() {
         // Create your views here
+        
+        var $carousel = $('.js-carousel');
+
+        $carousel.slick({
+            dots: true,
+            speed: 500
+        });
     };
 
     return App;

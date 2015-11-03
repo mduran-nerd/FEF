@@ -17,12 +17,20 @@ module.exports = function(grunt) {
         // Copies static files for non-optimized builds
         copy: {
             buildStyles: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_SRC %>',
-                    dest: '<%= env.DIR_DEST %>',
-                    src: ['assets/{styles,vendor}/**/*.css']
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_BEFORE %>',
+                        src: ['assets/{styles,vendor}/**/*.css']
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_AFTER %>',
+                        src: ['assets/{styles,vendor}/**/*.css']
+                    }
+                ]
             }
         },
 
@@ -46,13 +54,22 @@ module.exports = function(grunt) {
 
         sass: {
             buildStyles: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_SRC %>/assets/scss',
-                    src: ['*.scss'],
-                    dest: '<%= env.DIR_DEST %>/assets/styles',
-                    ext: '.css'
-                }],
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>/assets/scss',
+                        src: ['*.scss'],
+                        dest: '<%= env.DIR_BEFORE %>/assets/styles',
+                        ext: '.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>/assets/scss',
+                        src: ['*.scss'],
+                        dest: '<%= env.DIR_AFTER %>/assets/styles',
+                        ext: '.css'
+                    }
+                ],
                 options: {
                     outputStyle: (shouldMinify ? 'compressed' : 'nested')
                 }

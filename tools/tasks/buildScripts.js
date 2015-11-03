@@ -13,14 +13,24 @@ module.exports = function(grunt) {
         // Copies static files for non-optimized builds
         copy: {
             buildScripts: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_SRC %>',
-                    dest: '<%= env.DIR_DEST %>',
-                    src: shouldMinify
-                       ? ['assets/scripts/config.js', 'assets/vendor/requirejs/require.js']
-                       : ['assets/{scripts,vendor}/**/*.js']
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_BEFORE %>',
+                        src: shouldMinify
+                           ? ['assets/scripts/config.js', 'assets/vendor/requirejs/require.js']
+                           : ['assets/{scripts,vendor}/**/*.js']
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_AFTER %>',
+                        src: shouldMinify
+                           ? ['assets/scripts/config.js', 'assets/vendor/requirejs/require.js']
+                           : ['assets/{scripts,vendor}/**/*.js']
+                    }
+                ]
             }
         },
 

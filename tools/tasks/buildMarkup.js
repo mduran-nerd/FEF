@@ -21,17 +21,30 @@ module.exports = function(grunt) {
                         '<%= env.DIR_SRC %>/templates/**/*.hbs'
                     ]
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_SRC %>',
-                    dest: '<%= env.DIR_TMP %>',
-                    ext: '.html',
-                    src: [
-                        '**/*.hbs',
-                        '!templates/**',
-                        '!assets/vendor/**'
-                    ]
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_BEFORE %>',
+                        ext: '.html',
+                        src: [
+                            '**/*.hbs',
+                            '!templates/**',
+                            '!assets/vendor/**'
+                        ]
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_SRC %>',
+                        dest: '<%= env.DIR_AFTER %>',
+                        ext: '.html',
+                        src: [
+                            '**/*.hbs',
+                            '!templates/**',
+                            '!assets/vendor/**'
+                        ]
+                    }
+                ]
             }
         },
 
@@ -48,12 +61,14 @@ module.exports = function(grunt) {
                         'strong', 'em'
                     ]
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_TMP %>',
-                    dest: '<%= env.DIR_TMP %>',
-                    src: ['**/*.html']
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_TMP %>',
+                        dest: '<%= env.DIR_TMP %>',
+                        src: ['**/*.html']
+                    }
+                ]
             }
         },
 
@@ -66,12 +81,26 @@ module.exports = function(grunt) {
                         replacement: pkg.version
                     }]
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= env.DIR_TMP %>',
-                    dest: '<%= env.DIR_DEST %>',
-                    src: ['**/*.html']
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_TMP %>',
+                        dest: '<%= env.DIR_DEST %>',
+                        src: ['**/*.html']
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_TMP %>',
+                        dest: '<%= env.DIR_BEFORE %>',
+                        src: ['**/*.html']
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= env.DIR_TMP %>',
+                        dest: '<%= env.DIR_AFTER %>',
+                        src: ['**/*.html']
+                    }
+                ]
             }
         },
 

@@ -76,6 +76,24 @@ var Config = {
     DIR_DEST: 'web',
 
     /**
+     * The directory in which the version before
+     * performance optimization will live
+     *
+     * @property DIR_BEFORE
+     * @type String
+     */
+    DIR_BEFORE: 'before',
+
+    /**
+     * The directory in which the version after
+     * performance optimization will live
+     *
+     * @property DIR_AFTER
+     * @type String
+     */
+    DIR_AFTER: 'after',
+
+    /**
      * Path to documentation output files. No trailing slash.
      *
      * @property DIR_DOCS

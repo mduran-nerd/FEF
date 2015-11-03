@@ -58,14 +58,14 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '<%= env.DIR_SRC %>/assets/scss',
-                        src: ['*.scss'],
+                        src: ['modern-before.scss'],
                         dest: '<%= env.DIR_BEFORE %>/assets/styles',
                         ext: '.css'
                     },
                     {
                         expand: true,
                         cwd: '<%= env.DIR_SRC %>/assets/scss',
-                        src: ['*.scss'],
+                        src: ['modern-after.scss'],
                         dest: '<%= env.DIR_AFTER %>/assets/styles',
                         ext: '.css'
                     }

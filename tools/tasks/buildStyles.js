@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             options: {
                 root: '<%= env.DIR_SRC %>',
                 staging: '<%= env.DIR_TMP %>',
-                dest: '<%= env.DIR_DEST %>',
+                dest: '<%= env.DIR_AFTER %>',
                 flow: {
                     buildStyles: {
                         // Force css only

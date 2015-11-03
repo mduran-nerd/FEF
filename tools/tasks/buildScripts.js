@@ -90,10 +90,10 @@ module.exports = function(grunt) {
             buildScripts: {
                 options: {
                     // Name of input script (.js extension inferred)
-                    name: 'main',
+                    name: 'main-after',
 
                     // Destination path of final output
-                    out: '<%= env.DIR_DEST %>/assets/scripts/main.js',
+                    out: '<%= env.DIR_AFTER %>/assets/scripts/main-after.js',
 
                     // Override paths to exclude certain files from build
                     paths: {

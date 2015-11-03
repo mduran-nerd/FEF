@@ -5084,6 +5084,15 @@ button.close {
 .slide_three {
   background-image: url("../media/three.jpg"); }
 
+.slide_oneOptimized {
+  background-image: url("../media/one-min.jpg"); }
+
+.slide_twoOptimized {
+  background-image: url("../media/two-min.jpg"); }
+
+.slide_threeOptimized {
+  background-image: url("../media/three-min.jpg"); }
+
 .modal-open {
   overflow: hidden; }
 
